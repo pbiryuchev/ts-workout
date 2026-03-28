@@ -6,10 +6,13 @@ import inquirer, { DistinctQuestion } from 'inquirer';
 const padNumber = (number: number) => number.toString().padStart(3, '0');
 
 enum Platform {
-  LeetCode = 'leetcode',
-  BigFrontendDev = 'bfe',
-  CodeWars = 'codewars',
-  TypeChallenges = 'ts-challenges',
+  LeetCode = 'leetcode',                  // https://leetcode.com/
+  // BigFrontendDev = 'bfe',              // https://bigfrontend.dev/problem
+  // CodeWars = 'codewars',               // https://www.codewars.com
+  TypeChallenges = 'ts-challenges',       // https://github.com/type-challenges/type-challenges
+  RxJsChallenges = 'rxjs-challenges',     // https://github.com/AngularWave/rxjs-challenge
+  // RxJsNinja = 'rxjs-ninja',            // https://rxjs-course-avy.web.app/
+  // ReturnTrue = 'return-true',          // https://github.com/Rafalsky/return-true-to-win
 }
 
 const platformChoices = Object.values(Platform);
@@ -62,8 +65,9 @@ const questions: DistinctQuestion[] = [
 
 const taskMock = (link?: string) => (link ? `// ${link}\n\n` : '');
 
-const testMock = (number: string, title: string) => `
-import { describe, it, expect } from "vitest";
+const testMock = (number: string, title: string) =>
+  `import { describe, it, expect } from "vitest";
+
 describe("${padNumber(Number(number))} - ${title}", () => {
   it("UC1", () => {
     
