@@ -10,8 +10,8 @@ enum Platform {
   // BigFrontendDev = 'bfe',              // https://bigfrontend.dev/problem
   // CodeWars = 'codewars',               // https://www.codewars.com
   TypeChallenges = 'ts-challenges',       // https://github.com/type-challenges/type-challenges
-  RxJsChallenges = 'rxjs-challenges',     // https://github.com/AngularWave/rxjs-challenge
-  // RxJsNinja = 'rxjs-ninja',            // https://rxjs-course-avy.web.app/
+  // RxJsChallenges = 'rxjs-challenges',     // https://github.com/AngularWave/rxjs-challenge
+  RxJsNinja = 'rxjs-ninja',            // https://rxjs-course-avy.web.app/
   // ReturnTrue = 'return-true',          // https://github.com/Rafalsky/return-true-to-win
 }
 
