@@ -1,7 +1,7 @@
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { Command } from 'commander';
 import inquirer, { DistinctQuestion } from 'inquirer';
+import { Command } from 'commander';
 
 import { isValidNumber, isValidTitle, isValidURL } from './utils'
 
@@ -18,7 +18,6 @@ enum Platform {
 }
 
 const platformChoices = Object.values(Platform);
-
 
 const questions: DistinctQuestion[] = [
   {
