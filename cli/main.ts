@@ -3,6 +3,8 @@ import { join } from 'node:path';
 import { Command } from 'commander';
 import inquirer, { DistinctQuestion } from 'inquirer';
 
+import { isValidNumber, isValidTitle, isValidURL } from './utils'
+
 const padNumber = (number: number) => number.toString().padStart(3, '0');
 
 enum Platform {
@@ -17,11 +19,6 @@ enum Platform {
 
 const platformChoices = Object.values(Platform);
 
-const isValidNumber = (input: string): boolean => /^\d+$/.test(input);
-const isValidTitle = (input: string): boolean =>
-  /^[a-zA-Z0-9_\-]+$/.test(input);
-const isValidURL = (input: string): boolean =>
-  input === '' || /^(https?:\/\/\S+)$/.test(input);
 
 const questions: DistinctQuestion[] = [
   {
